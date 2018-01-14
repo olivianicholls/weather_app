@@ -22,10 +22,12 @@ button, input {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #fff;
   font-size: 70px;
+  font-weight: 100;
   color: #fff;
   width: 100%;
   height: 150px;
   padding: 10px;
+  border-radius: 0;
 }
 input:focus, input:enabled {
   outline: none;
@@ -61,9 +63,9 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 }
 #new-search {
   display: none;
-  width: 150px;
-  border-radius: 100px;
-  height: 80px;
+  width: 120px;
+  border-radius: 30px;
+  height: 70px;
   font-size: 30px;
   margin: 40px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
@@ -75,17 +77,25 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 }
 #weatherData {
   display: none;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   text-align: center;
   width: 25%;
   grid-template-columns: 50% 70%;
 }
 #location {
   margin: 10px;
+  font-size: 40px;
 }
-#temp, #description {
-  display: inline-block;
+#temp {
+  font-size: 70px;
+  margin: 30px 0 0 0;
+}
+#description {
   padding: 0 80px;
+  
+}
+#city, #country {
+  border-bottom: none;
 }
 i {
   font-size: 40px;
@@ -95,6 +105,7 @@ i {
   font-size: 20px;
 }
 p {
+  font-weight: 100;
   font-size: 30px;
   margin-top: 30px;
 }
