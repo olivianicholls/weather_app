@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: rgba(28,146,210,1);
+  background: -moz-linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(28,146,210,1)), color-stop(100%, rgba(242,252,254,1)));
+  background: -webkit-linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
+  background: -o-linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
+  background: -ms-linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
+  background: linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c92d2', endColorstr='#f2fcfe', GradientType=1 );
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  margin: 0px auto;
+  color: #fff;
+}
+button, input {
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
+  font-size: 70px;
+  color: #fff;
+  width: 100%;
+  height: 350px;
+  padding: 10px;
+}
+input:focus, input:enabled {
+  outline: none;
+  padding: 0 10%;
+  text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+  text-align: center;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+  text-align: center;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+  text-align: center;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
+  text-align: center;
+}
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+#search {
+  display: grid;
+  grid-template-rows: 350px 1fr;
+  margin: 100px;
+}
+#new-search {
+  display: none;
+  width: 200px;
+  border-radius: 100px;
+  height: 100px;
+  font-size: 40px;
+  margin: 40px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+#weather {
+  text-align: center;
+  display: none;
+}
+#weatherData {
+  display: none;
+  margin: 0 auto;
+  width: 20%;
+  grid-template-columns: 50% 1fr;
+}
+#location {
+  font-size: 140px;
+  margin: 10px;
+}
+#temp {
+  font-size: 170px;
+}
+#temp, #description {
+  display: inline-block;
+  padding: 0 80px;
+}
+i {
+  font-size: 90px;
+}
+.iconText {
+  margin: 0;
+  font-size: 30px;
+}
+p {
+  font-size: 70px;
+  margin-top: 30px;
+}
+
+
+@media (max-width: 600px) {
+  button, input {
+    font-size: 150px;
+    width: 100%;
+  }
+  p {
+    font-size: 70px;
+    margin: 0 40px;
+    text-align: center;
+  }
+  #location {
+    font-size: 90px;
+  }
+}
