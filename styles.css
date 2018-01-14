@@ -24,7 +24,7 @@ button, input {
   font-size: 70px;
   color: #fff;
   width: 100%;
-  height: 350px;
+  height: 150px;
   padding: 10px;
 }
 input:focus, input:enabled {
@@ -56,17 +56,17 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 
 #search {
   display: grid;
-  grid-template-rows: 350px 1fr;
+  grid-template-rows: 150px 1fr;
   margin: 100px;
 }
 #new-search {
   display: none;
-  width: 200px;
+  width: 150px;
   border-radius: 100px;
-  height: 100px;
-  font-size: 40px;
+  height: 80px;
+  font-size: 30px;
   margin: 40px;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   border: none;
 }
 #weather {
@@ -76,44 +76,40 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 #weatherData {
   display: none;
   margin: 0 auto;
-  width: 20%;
-  grid-template-columns: 50% 1fr;
+  text-align: center;
+  width: 25%;
+  grid-template-columns: 50% 70%;
 }
 #location {
-  font-size: 140px;
   margin: 10px;
-}
-#temp {
-  font-size: 170px;
 }
 #temp, #description {
   display: inline-block;
   padding: 0 80px;
 }
 i {
-  font-size: 90px;
+  font-size: 40px;
 }
 .iconText {
   margin: 0;
-  font-size: 30px;
+  font-size: 20px;
 }
 p {
-  font-size: 70px;
+  font-size: 30px;
   margin-top: 30px;
 }
 
 
 @media (max-width: 600px) {
+  #search {
+    margin: 50px;
+  }
   button, input {
-    font-size: 150px;
-    width: 100%;
+    font-size: 30px;
   }
-  p {
-    font-size: 70px;
-    margin: 0 40px;
-    text-align: center;
+  #weatherData {
+    width: 65%;
+    grid-template-columns: 50% 50%;
   }
-  #location {
-    font-size: 90px;
-  }
+ 
 }
