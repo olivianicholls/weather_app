@@ -16,6 +16,7 @@ function fetchJSON() {
   })
 }
 
+
 // Clear old and set new location functions
 let clearAndSet = {
   clearPrevious: function(id) {
@@ -108,12 +109,17 @@ function setContent(id, content, category) {
   }
 }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function weatherResults(response) {
   let city = response.name;
   let country = response.sys.country;
   let location = city + ', ' + country;
   let temp = response.main.temp;
   let description = response.weather[0].description;
+  let capitalizedDescription = capitalizeFirstLetter(description);
   let tempMin = response.main.temp_min;
   let tempMax = response.main.temp_max;
   let wind = response.wind.speed;
@@ -125,7 +131,7 @@ function weatherResults(response) {
   
   setContent('location', location, '');
   setContent('temp', temp, celcius);
-  setContent('description', description, '');
+  setContent('description', capitalizedDescription, '');
   setContent('tempMax', tempMax, celcius);
   setContent('tempMin', tempMin, celcius);
   setContent('wind', wind, ' mph');
@@ -138,6 +144,7 @@ function weatherResults(response) {
   icon('pressure', 'Pressure', 'ion ion-ios-speedometer');
   icon('wind', 'Wind', 'ion ion-ios-flag');
 }
+
 
 function icon(name, textContent, iconClass) {
   name = document.getElementById(name);
