@@ -12,6 +12,7 @@ function fetchJSON() {
   .then(function(response) {
     weatherResults(response);
   })
+  .catch(set.error);
 }
 
 // Clear old location data
