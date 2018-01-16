@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Khula', sans-serif;
   background: rgba(28,146,210,1);
   background: -moz-linear-gradient(45deg, rgba(28,146,210,1) 0%, rgba(242,252,254,1) 100%);
   background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(28,146,210,1)), color-stop(100%, rgba(242,252,254,1)));
@@ -13,11 +13,12 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.container {
+#container {
   margin: 0px auto;
   color: #fff;
 }
 button, input {
+  font-family: 'Khula', sans-serif;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #fff;
@@ -65,11 +66,15 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
   display: none;
   width: 120px;
   border-radius: 30px;
-  height: 70px;
+  height: 60px;
   font-size: 30px;
   margin: 40px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   border: none;
+}
+#errorMessage {
+  width: 450px;
+  margin: 100px auto;
 }
 #weather {
   text-align: center;
@@ -79,8 +84,12 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
   display: none;
   margin: 0 auto 50px auto;
   text-align: center;
-  width: 25%;
-  grid-template-columns: 50% 70%;
+  width: 60%;
+  height: 120px;
+  grid-template: 60% 40% / repeat(5, 1fr);
+}
+#weatherData div {
+  margin: 15px;
 }
 #location {
   margin: 10px;
@@ -102,25 +111,30 @@ i {
 }
 .iconText {
   margin: 0;
-  font-size: 20px;
+  font-size: 14px;
 }
 p {
   font-weight: 100;
   font-size: 30px;
   margin-top: 30px;
 }
-
+#timestamp p {
+    text-align: center;
+  font-size: 14px;
+}
 
 @media (max-width: 600px) {
   #search {
-    margin: 50px;
+    margin: 30px;
   }
   button, input {
     font-size: 30px;
   }
   #weatherData {
-    width: 65%;
-    grid-template-columns: 50% 50%;
+    width: 95%;
+    height: 220px;
+  grid-template: 60% 40% / repeat(5, 1fr);
+    margin: 0 auto;
   }
  
 }
