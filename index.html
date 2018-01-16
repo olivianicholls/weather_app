@@ -6,9 +6,10 @@
   <title>Weather App</title>
   <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'>
   <link href='styles.css' type='text/css' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Khula:300" rel="stylesheet">
 </head>
 <body>
-  <div class='container'>
+  <div id='container'>
     <button id='new-search'>Search</button>
     
     <div id='search'> 
@@ -18,7 +19,7 @@
       <label for="country">
         <input type="text" id='country' placeholder='Country'>
       </label>
-      <button id='searchbtn' onclick='clearAndSet.setNewLocation()'>Search</button>
+      <button id='searchbtn' onclick='set.setNewLocation()'>Search</button>
     </div>
   
 
