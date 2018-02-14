@@ -146,7 +146,7 @@ let showHide = {
     let countryInput = document.getElementById('country');
     
     newSearch.addEventListener('click', function(event) {
-      searchDiv.style.display = 'block';
+      searchDiv.style.display = 'grid';
       newSearch.style.display = 'none';
       weatherDiv.style.display = 'none';
       weatherData.style.display = 'none';
@@ -203,9 +203,9 @@ function weatherResults(response) {
   
   set.setIcons('High', 'ion ion-arrow-up-c');
   set.setIcons('Low', 'ion ion-arrow-down-c');
-  set.setIcons('Humidity', 'ion ion-umbrella');
-  set.setIcons('Pressure', 'ion ion-ios-speedometer');
   set.setIcons('Wind', 'ion ion-ios-flag');
+  set.setIcons('Pressure', 'ion ion-ios-speedometer');
+  set.setIcons('Humidity', 'ion ion-umbrella');
   
   let date = new Date(timestamp*1000);
   let hours = date.getHours();
