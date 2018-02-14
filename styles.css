@@ -26,7 +26,7 @@ button, input {
   font-weight: 100;
   color: #fff;
   width: 100%;
-  height: 250px;
+  height: 150px;
   padding: 10px;
   border-radius: 0;
 }
@@ -34,6 +34,17 @@ input:focus, input:enabled {
   outline: none;
   padding: 0 10%;
   text-align: center;
+}
+@-webkit-keyframes autofill {
+    to {
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -86,7 +97,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
   text-align: center;
   width: 60%;
   height: 120px;
-  grid-template: 60% 40% / repeat(5, 1fr);
+  grid-template: 70% 80% / repeat(5, 1fr);
 }
 #weatherData div {
   margin: 15px;
@@ -101,7 +112,6 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
 }
 #description {
   padding: 0 80px;
-  
 }
 #city, #country {
   border-bottom: none;
@@ -118,8 +128,11 @@ p {
   font-size: 30px;
   margin-top: 30px;
 }
+#timestamp {
+  margin-top: 100px;
+}
 #timestamp p {
-    text-align: center;
+  text-align: center;
   font-size: 14px;
 }
 @media (max-width: 1024px) {
@@ -133,17 +146,37 @@ p {
   }
   button, input {
     font-size: 45px;
-    height: 270px;
+    height: 151px;
   }
   #weatherData {
     width: 95%;
-    height: 420px;
-  grid-template: 20% 40% / repeat(5, 1fr);
     margin: 0 auto;
   } 
 }
 @media (max-width: 612px) {
-  #weatherData {
-    grid-template: 30% 40% / repeat(5, 1fr);
+  p {
+    font-size: 21px;
+  }
+  #timstamp {
+    margin-top: 0;
+  }
+  #errorMessage {
+    width: 300px;
+  }
+  i {
+    font-size: 30px;
+  }
+}
+@media (max-width: 502px) {
+  p {
+    font-size: 18px;
+  }
+   #weatherData {
+    grid-template: 50% 80% / repeat(5, 1fr);
+  }
+}
+@media (max-width: 397px) {
+  p {
+    font-size: 16px;
   }
 }
