@@ -16,6 +16,7 @@ body {
 #container {
   margin: 0px auto;
   color: #fff;
+  height: 750px;
 }
 button, input {
   font-family: 'Khula', sans-serif;
@@ -26,7 +27,7 @@ button, input {
   font-weight: 100;
   color: #fff;
   width: 100%;
-  height: 150px;
+  height: 100%;
   padding: 10px;
   border-radius: 0;
 }
@@ -72,16 +73,15 @@ input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   margin: 100px;
+  height: 100%;
 }
 #new-search {
-  display: none;
-  width: 120px;
-  border-radius: 30px;
-  height: 60px;
-  font-size: 30px;
-  margin: 40px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border: none;
+ display: none;
+    width: 120px;
+    height: 60px;
+    font-size: 30px;
+    margin: 40px;
+    background: none;
 }
 #errorMessage {
   width: 450px;
@@ -143,10 +143,10 @@ p {
 @media (max-width: 787px) {
   #search {
     margin: 10%;
+    height: 430px;
   }
   button, input {
     font-size: 45px;
-    height: 151px;
   }
   #weatherData {
     width: 95%;
@@ -157,7 +157,7 @@ p {
   p {
     font-size: 21px;
   }
-  #timstamp {
+  #timestamp {
     margin-top: 0;
   }
   #errorMessage {
@@ -165,6 +165,9 @@ p {
   }
   i {
     font-size: 30px;
+  }
+  #new-search {
+    margin: 40px auto;
   }
 }
 @media (max-width: 502px) {
